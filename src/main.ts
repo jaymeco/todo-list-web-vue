@@ -9,10 +9,17 @@ import * as directives from 'vuetify/directives';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+import darkTheme from './theme/dark';
 
 const vuetify = createVuetify({
   components,
   directives,
+  theme: {
+    defaultTheme: 'darkTheme',
+    themes: {
+      darkTheme,
+    },
+  },
 });
 
 createApp(App)
